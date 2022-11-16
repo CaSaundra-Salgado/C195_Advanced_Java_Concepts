@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <Label fx:id="headerLabel" layoutX="181.0" layoutY="22.0" text="Salgado's Appointment Management Application">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="usernameLabel" layoutX="181.0" layoutY="87.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label fx:id="passwordLabel" layoutX="183.0" layoutY="136.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <PasswordField fx:id="passwordTextField" layoutX="312.0" layoutY="132.0" prefHeight="25.0" prefWidth="102.0" />
+        <TextField fx:id="usernameTextField" layoutX="312.0" layoutY="83.0" prefHeight="25.0" prefWidth="102.0" />
+        <Button fx:id="loginBtn" layoutX="188.0" layoutY="262.0" mnemonicParsing="false" onAction="#onLoginBtn" style="-fx-background-color: #000;" text="Login" textFill="WHITE" underline="true" />
+        <Button fx:id="cancelLoginBtn" layoutX="363.0" layoutY="262.0" mnemonicParsing="false" onAction="#onCancelLoginBtn" style="-fx-background-color: #000;" text="Cancel" textFill="WHITE" underline="true" />
+        <Label layoutX="186.0" layoutY="192.0" text="Location:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="locationTextField" editable="false" layoutX="312.0" layoutY="188.0" prefHeight="25.0" prefWidth="102.0" />
+    </children>
+</AnchorPane>

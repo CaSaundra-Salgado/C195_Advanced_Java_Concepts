@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+    <children>
+        <Label layoutX="111.0" layoutY="44.0" text="Add Customer">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TableView fx:id="customersTable" layoutX="230.0" layoutY="180.0" prefHeight="200.0" prefWidth="642.0">
+            <columns>
+                <TableColumn fx:id="customerIDColumn" prefWidth="79.0" text="Customer ID" />
+                <TableColumn fx:id="customerNameColumn" prefWidth="117.0" text="Name" />
+                <TableColumn fx:id="customerPhoneColumn" prefWidth="125.0" text="Telephone" />
+                <TableColumn fx:id="customerAddressColumn" prefWidth="127.0" text="Address" />
+                <TableColumn fx:id="customerDivisionColumn" prefWidth="98.0" text="Division" />
+                <TableColumn fx:id="customerPostalCodeColumn" prefWidth="95.0" text="Zipcode" />
+            </columns>
+        </TableView>
+        <Label layoutX="497.0" layoutY="139.0" text="Edit Customer">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Button fx:id="addCustomerBtn" layoutX="15.0" layoutY="398.0" mnemonicParsing="false" onAction="#onAddCustomerBtn" style="-fx-background-color: #000;" text="Add" textFill="WHITE" underline="true" />
+        <Button fx:id="addCustomerBackBtn" layoutX="153.0" layoutY="398.0" mnemonicParsing="false" onAction="#onAddCustomerBackBtn" style="-fx-background-color: #000;" text="Back" textFill="WHITE" underline="true" />
+        <Button fx:id="modifyCustomerBtn" layoutX="711.0" layoutY="398.0" mnemonicParsing="false" onAction="#onModifyCustomerBtn" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #000;" text="Modify" textFill="WHITE" underline="true" />
+        <Button fx:id="deleteModifyCustomerBtn" layoutX="820.0" layoutY="398.0" mnemonicParsing="false" onAction="#onDeleteModifyCustomerBtn" style="-fx-background-color: #000;" text="Delete" textFill="WHITE" underline="true" />
+        <Label layoutX="475.0" layoutY="14.0" text="Customers">
+            <font>
+                <Font name="Felix Titling" size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="13.0" layoutY="98.0" text="Customer ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="addCustomerID" editable="false" layoutX="92.0" layoutY="94.0" prefHeight="25.0" prefWidth="118.0" promptText="Auto-Generated" />
+        <Label layoutX="15.0" layoutY="139.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="addCustomerName" layoutX="92.0" layoutY="135.0" prefHeight="25.0" prefWidth="118.0" promptText="Adele Adkins" />
+        <Label layoutX="15.0" layoutY="183.0" text="Telephone:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="addCustomerPhone" layoutX="92.0" layoutY="179.0" prefHeight="25.0" prefWidth="118.0" />
+        <Label layoutX="19.0" layoutY="224.0" text="Country:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="18.0" layoutY="271.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="17.0" layoutY="316.0" text="Division:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="18.0" layoutY="357.0" text="Zipcode:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="addCustomerAddress" layoutX="92.0" layoutY="267.0" prefHeight="25.0" prefWidth="118.0" />
+        <TextField fx:id="addCustomerPostalCode" layoutX="92.0" layoutY="353.0" prefHeight="25.0" prefWidth="118.0" />
+      <ComboBox fx:id="addCustomerCountry" layoutX="92.0" layoutY="220.0" prefHeight="25.0" prefWidth="118.0" promptText="Select Country..." />
+      <ComboBox fx:id="addCustomerDivision" layoutX="92.0" layoutY="312.0" prefHeight="25.0" prefWidth="118.0" promptText="Select Division..." />
+    </children>
+</AnchorPane>

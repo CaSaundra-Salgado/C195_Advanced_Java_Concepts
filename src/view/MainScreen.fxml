@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+    <children>
+        <Label layoutX="265.0" layoutY="46.0" text="Welcome!">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="firstScreenCustomerBtn" layoutX="252.0" layoutY="135.0" mnemonicParsing="false" onAction="#onFirstScreenCustomerBtn" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #000;" text="Customers" textFill="WHITE" underline="true" />
+        <Button fx:id="firstScreenAppointmentBtn" layoutX="252.0" layoutY="188.0" mnemonicParsing="false" onAction="#onFirstScreenAppointmentBtn" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #000;" text="Appointments" textFill="WHITE" underline="true" />
+        <Button fx:id="firstScreenReportsBtn" layoutX="252.0" layoutY="238.0" mnemonicParsing="false" onAction="#onFirstScreenReportsBtn" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #000;" text="Reports" textFill="WHITE" underline="true" />
+        <Button fx:id="firstScreenExitBtn" layoutX="252.0" layoutY="287.0" mnemonicParsing="false" onAction="#onFirstScreenExitBtn" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #000;" text="Exit" textFill="WHITE" underline="true" />
+    </children>
+</AnchorPane>

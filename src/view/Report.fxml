@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="459.0" prefWidth="932.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportController">
+   <children>
+      <Label layoutX="422.0" layoutY="33.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <TabPane layoutX="26.0" layoutY="82.0" prefHeight="342.0" prefWidth="881.0" style="-fx-background-color: teal;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="appointmentsByTypeMonth" onSelectionChanged="#onAppointmentsByTypeMonth" text="Appointments By Type/Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="550.0" style="-fx-background-color: teal;">
+                     <children>
+                        <TableView fx:id="reportsAppointmentsTypeTable" layoutX="56.0" layoutY="66.0" prefHeight="200.0" prefWidth="353.0">
+                          <columns>
+                            <TableColumn fx:id="reportsAppointmentTypeColumn" prefWidth="173.0" text="Appointment Type" />
+                              <TableColumn fx:id="reportsAppointmentTypeTotalColumn" prefWidth="179.0" text="Appointment Total" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="reportsAppointmentMonthTable" layoutX="507.0" layoutY="66.0" prefHeight="200.0" prefWidth="330.0">
+                          <columns>
+                            <TableColumn fx:id="reportsAppointmentsMonthColumn" prefWidth="181.0" text="Appointment Month" />
+                            <TableColumn fx:id="reportsAppointmentsMonthTotalColumn" prefWidth="147.0" text="Appointment Total" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="reportBackButton" layoutX="393.0" layoutY="274.0" mnemonicParsing="false" onAction="#onReportBackButton" style="-fx-background-color: #000;" text="Back To Main Screen" textFill="WHITE" underline="true" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="contactSchedule" text="Contact Schedule">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="278.0" prefWidth="728.0">
+                     <children>
+                        <TableView fx:id="reportsContactTable" layoutX="14.0" layoutY="55.0" prefHeight="200.0" prefWidth="853.0">
+                          <columns>
+                            <TableColumn fx:id="reportsContactIDColumn" prefWidth="100.0" text="Contact ID" />
+                            <TableColumn fx:id="reportsContactAppointmentIDColumn" prefWidth="105.0" text="Appointment ID" />
+                              <TableColumn fx:id="reportsContactCustomerIDColumn" prefWidth="89.0" text="Customer ID" />
+                              <TableColumn fx:id="reportsContactTitleColumn" prefWidth="99.0" text="Title" />
+                              <TableColumn fx:id="reportsContactTypeColumn" text="Type" />
+                              <TableColumn fx:id="reportsContactDescriptionColumn" prefWidth="111.0" text="Description" />
+                              <TableColumn fx:id="reportsContactStartColumn" minWidth="0.0" prefWidth="131.0" text="Start" />
+                              <TableColumn fx:id="reportsContactEndColumn" minWidth="0.0" prefWidth="137.0" text="End" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="342.0" layoutY="26.0" text="Contacts:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <ComboBox fx:id="contactReportsSelection" layoutX="423.0" layoutY="22.0" onAction="#onContactReportsSelection" prefHeight="25.0" prefWidth="131.0" promptText="Select Contact..." />
+                        <Button fx:id="reportContactBackButton" layoutX="405.0" layoutY="268.0" mnemonicParsing="false" onAction="#onReportBackButton" style="-fx-background-color: #000;" text="Back To Main Screen" textFill="WHITE" underline="true" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="appointmentsByUserID" text="AppointmentsByUserID">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="reportsUserIDTable" layoutX="134.0" layoutY="57.0" prefHeight="200.0" prefWidth="613.0">
+                           <columns>
+                              <TableColumn fx:id="userIDReportColumn" prefWidth="62.0" text="User ID" />
+                              <TableColumn fx:id="contactIDReportColumn" prefWidth="67.0" text="Contact ID" />
+                              <TableColumn fx:id="appointmentIDReportColumn" prefWidth="120.0" text="Appointment ID" />
+                              <TableColumn fx:id="appointmentTypeReportColumn" prefWidth="116.0" text="Appointment Type" />
+                              <TableColumn fx:id="appointmentStartReportColumn" prefWidth="123.0" text="Start" />
+                              <TableColumn fx:id="appointmentEndReportColumn" prefWidth="124.0" text="End" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="reportUserIDBackButton" layoutX="378.0" layoutY="267.0" mnemonicParsing="false" onAction="#onReportBackButton" style="-fx-background-color: #000;" text="Back To Main Screen" textFill="WHITE" underline="true" />
+                        <Label layoutX="353.0" layoutY="25.0" text="User ID:" underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <ComboBox fx:id="userReportsSelection" layoutX="422.0" layoutY="21.0" onAction="#onUserReportsSelection" prefHeight="25.0" prefWidth="99.0" promptText="Select ID..." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

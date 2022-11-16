@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="543.0" prefWidth="781.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyAppointmentController">
+   <children>
+      <Label layoutX="335.0" layoutY="14.0" text="Modify Appointment">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="modifyAppointmentCustomerTable" layoutX="46.0" layoutY="76.0" prefHeight="409.0" prefWidth="360.0">
+        <columns>
+          <TableColumn fx:id="modifyAppointmentIDColumn" prefWidth="119.0" text="Appointment ID:" />
+          <TableColumn fx:id="modifyCustomerIDColumn" prefWidth="122.0" text="Customer ID:" />
+            <TableColumn fx:id="modifyUserIDColumn" prefWidth="118.0" text="User ID:" />
+        </columns>
+      </TableView>
+      <Label layoutX="184.0" layoutY="46.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="127.0" text="User ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="modifyAppointmentID" editable="false" layoutX="618.0" layoutY="42.0" promptText="Auto-Generated" />
+      <Label layoutX="515.0" layoutY="46.0" text="Appointment ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="168.0" text="Title:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="modifyAppointmentTitle" layoutX="620.0" layoutY="164.0" />
+      <Label layoutX="515.0" layoutY="225.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextArea fx:id="modifyAppointmentDescription" layoutX="619.0" layoutY="206.0" prefHeight="55.0" prefWidth="150.0" />
+      <Label layoutX="515.0" layoutY="277.0" text="Location:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="316.0" text="Contact:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="352.0" text="Type:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="85.0" text="Customer ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="426.0" text="Start Time:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="515.0" layoutY="464.0" text="End Time:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="modifyAppointmentBtn" layoutX="511.0" layoutY="504.0" mnemonicParsing="false" onAction="#onModifyAppointmentBtn" style="-fx-background-color: #000;" text="Modify" textFill="WHITE" underline="true" />
+      <Button fx:id="backModifyAppointmentBtn" layoutX="726.0" layoutY="504.0" mnemonicParsing="false"
+              onAction="#onBackModifyAppointmentBtn" style="-fx-background-color: #000;" text="Back" textFill="WHITE"
+              underline="true" />
+      <ComboBox fx:id="modifyAppointmentContact" layoutX="618.0" layoutY="312.0" prefWidth="150.0" />
+      <ComboBox fx:id="modifyAppointmentStart" layoutX="618.0" layoutY="422.0" prefWidth="150.0" />
+      <ComboBox fx:id="modifyAppointmentEnd" layoutX="618.0" layoutY="460.0" prefWidth="150.0" />
+      <ComboBox fx:id="modifyAppointmentCustomerID" layoutX="618.0" layoutY="81.0" prefWidth="150.0" />
+      <ComboBox fx:id="modifyAppointmentUserID" layoutX="618.0" layoutY="123.0" prefWidth="150.0" />
+      <TextField fx:id="modifyAppointmentLocation" layoutX="618.0" layoutY="273.0" />
+      <TextField fx:id="modifyAppointmentType" layoutX="618.0" layoutY="348.0" />
+      <DatePicker fx:id="modifyAppointmentDate" layoutX="618.0" layoutY="386.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="515.0" layoutY="390.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

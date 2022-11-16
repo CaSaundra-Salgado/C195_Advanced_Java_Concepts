@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="965.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyCustomerController">
+    <children>
+        <Label layoutX="42.0" layoutY="73.0" text="Customer ID:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="464.0" layoutY="22.0" text="Modify Customer" textFill="#000000fa">
+            <font>
+                <Font name="Felix Titling" size="14.0" />
+            </font></Label>
+        <TableView fx:id="customersTable" layoutX="99.0" layoutY="236.0" prefHeight="200.0" prefWidth="783.0">
+            <columns>
+                <TableColumn fx:id="customerIDColumn" prefWidth="93.0" text="Customer ID" />
+                <TableColumn fx:id="customerNameColumn" prefWidth="112.0" text="Name" />
+                <TableColumn fx:id="customerPhoneColumn" prefWidth="116.0" text="Phone" />
+                <TableColumn fx:id="customerAddressColumn" prefWidth="174.0" text="Address" />
+                <TableColumn fx:id="customerDivisionColumn" prefWidth="179.0" text="Division" />
+                <TableColumn fx:id="customerPostalCodeColumn" prefWidth="108.0" text="Zipcode" />
+            </columns>
+        </TableView>
+        <Label layoutX="302.0" layoutY="73.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="modifyCustomerNameField" layoutX="350.0" layoutY="69.0" prefHeight="25.0" prefWidth="120.0" />
+        <Label layoutX="533.0" layoutY="73.0" text="Phone:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="modifyCustomerPhoneField" layoutX="586.0" layoutY="69.0" prefHeight="25.0" prefWidth="138.0" />
+        <Label layoutX="42.0" layoutY="134.0" text="Country:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="762.0" layoutY="73.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="modifyCustomerAddressField" layoutX="822.0" layoutY="69.0" prefHeight="25.0" prefWidth="120.0" />
+        <Label layoutX="296.0" layoutY="134.0" text="Division:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <Label layoutX="533.0" layoutY="134.0" text="Zipcode:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="modifyCustomerPostalCodeField" layoutX="586.0" layoutY="130.0" prefHeight="25.0" prefWidth="138.0" />
+        <Button fx:id="modifyCustomerSaveBtn" layoutX="785.0" layoutY="130.0" mnemonicParsing="false" onAction="#onModifyCustomerSaveBtn" prefHeight="25.0" prefWidth="52.0" style="-fx-background-color: #000;" text="Save" textFill="WHITE" underline="true" />
+        <Button fx:id="modifyCustomerCancelBtn" contentDisplay="CENTER" layoutX="552.0" layoutY="444.0" mnemonicParsing="false" onAction="#onModifyCustomerCancelBtn" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #000;" text="Cancel" textAlignment="CENTER" textFill="WHITE" underline="true" />
+        <TextField fx:id="modifyCustomerID" editable="false" layoutX="128.0" layoutY="69.0" prefHeight="25.0" prefWidth="105.0" promptText="Auto-Generated" />
+      <ComboBox fx:id="modifyCustomerCountryField" layoutX="128.0" layoutY="130.0" prefHeight="25.0" prefWidth="105.0" />
+      <ComboBox fx:id="modifyCustomerDivisionField" layoutX="353.0" layoutY="130.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="375.0" layoutY="190.0" text="All Customers Table">
+         <font>
+            <Font name="Felix Titling" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="modifyCustomersDeleteButton" layoutX="312.0" layoutY="444.0" mnemonicParsing="false" onAction="#onModifyDeleteButton" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #000;" text="Delete" textFill="WHITE" underline="true" />
+      <Button fx:id="modifyCustomerClearButton" layoutX="882.0" layoutY="130.0" mnemonicParsing="false" onAction="#onModifyCustomerClearButton" style="-fx-background-color: #000;" text="Clear" textFill="WHITE" underline="true" />
+    </children>
+</AnchorPane>
